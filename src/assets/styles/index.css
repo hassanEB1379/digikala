@@ -1,0 +1,27 @@
+html {
+  font-size: 13px;
+}
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@import "./font.css";
+
+/* customize swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply shadow-md py-14 px-6;
+  color: black !important;
+  transform: translateY(-60px);
+}
+
+.swiper-pagination-bullet {
+  @apply w-3 h-3 bg-gray-50 shadow !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
