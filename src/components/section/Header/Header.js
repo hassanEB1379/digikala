@@ -1,8 +1,14 @@
 import Logo from "components/micro/Logo";
-import Search from "components/micro/Search";
+import Search from "./components/Search/Search";
 import useScrollEvent from "hooks/useScrollEvent";
 import Collapse from "components/micro/Collapse";
 import Button from "components/micro/Button";
+import DigiPay from "./components/Menu/DigiPay";
+import { useState } from "react";
+import DigiPlus from "./components/Menu/DigiPlus";
+import NavItem from "./components/NavItem/NavItem";
+import Fade from "components/micro/Fade";
+import Offers from "./components/Menu/Offers";
 
 // icons
 import {
@@ -15,11 +21,13 @@ import { FiShoppingCart, FiMenu } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { FaMoneyCheck } from "react-icons/fa";
+import MegaMenu from "./components/Menu/MegaMenu";
 
 const menuItems = [
   {
     name: "دسته بندی کالا ها",
     icon: <FiMenu />,
+    SubMenu: MegaMenu,
   },
   {
     name: "سوپر مارکت",
@@ -28,6 +36,7 @@ const menuItems = [
   {
     name: "تخفیف ها و پیشنهاد ها",
     icon: <RiPercentLine />,
+    SubMenu: Offers,
   },
   {
     name: "دیجی کالای من",
@@ -36,57 +45,68 @@ const menuItems = [
   {
     name: "دیجی پلاس",
     icon: <RiStarLine />,
+    SubMenu: DigiPlus,
   },
   {
     name: "دیجی پی",
     icon: <FaMoneyCheck />,
+    SubMenu: DigiPay,
   },
 ];
 
 const Header = () => {
   const [down] = useScrollEvent();
 
+  const [subMenuIsOpen, setSubMenuIsOpen] = useState(false);
+
   return (
-    <header className="px-8 w-full bg-white shadow-header fixed z-20">
-      <div className="flex py-4">
-        <div className="flex items-center w-2/3">
-          <Logo />
+    <>
+      <header className="px-8 w-full bg-white shadow-header fixed z-20">
+        <div className="flex py-4">
+          <div className="flex items-center w-2/3">
+            <Logo />
 
-          <Search />
+            <Search />
+          </div>
+
+          <div className="flex w-1/3 justify-end items-center">
+            <Button icon={<RiUserLine />}>ورود به ناحیه کاربری</Button>
+
+            <a href="/" className="pr-6">
+              <FiShoppingCart size="1.5em" />
+            </a>
+          </div>
         </div>
 
-        <div className="flex w-1/3 justify-end items-center">
-          <Button icon={<RiUserLine />}>ورود به ناحیه کاربری</Button>
+        {/* navbar */}
+        <Collapse component="nav" show={subMenuIsOpen || !down}>
+          <ul className="h-full flex justify-between relative">
+            <li className="h-full">
+              <ul className="flex h-full">
+                {menuItems.map((item, i) => (
+                  <NavItem
+                    subMenuStateCb={setSubMenuIsOpen}
+                    data={item}
+                    key={i}
+                  />
+                ))}
+              </ul>
+            </li>
 
-          <a href="/" className="pr-6">
-            <FiShoppingCart size="1.5em" />
-          </a>
-        </div>
-      </div>
+            <li className="flex items-center gap-3">
+              <p>لطفا شهر و استان خود را انتخاب کنید</p>
+              <GoLocation />
+            </li>
+          </ul>
+        </Collapse>
+      </header>
 
-      <Collapse component="nav" show={!down}>
-        <ul className="h-full flex justify-between relative">
-          <li>
-            <ul className="flex  gap-8">
-              {menuItems.map((item, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  {item.icon}
-                  <span className="font-bold">{item.name}</span>
-                  <div className="absolute right-0 left-0 top-full z-10 hidden">
-                    {item.subMenu}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </li>
-
-          <li className="flex items-center gap-3">
-            <p>لطفا شهر و استان خود را انتخاب کنید</p>
-            <GoLocation />
-          </li>
-        </ul>
-      </Collapse>
-    </header>
+      <Fade
+        id="navbar-overlay"
+        className="fixed inset-0 z-10 bg-gray-900 bg-opacity-30"
+        show={subMenuIsOpen}
+      />
+    </>
   );
 };
 
