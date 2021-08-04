@@ -8,7 +8,7 @@ export const special = [
     withDiscount: "149000",
     currency: "تومان",
     gift: "14400",
-    discountDate: "8/4/2021",
+    discountDate: "9/5/2021",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const special = [
     withDiscount: "18550000",
     currency: "تومان",
     gift: "14400",
-    discountDate: "8/4/2021",
+    discountDate: "9/5/2021",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const special = [
     price: "979000",
     withDiscount: "369900",
     currency: "تومان",
-    discountDate: "8/4/2021",
+    discountDate: "9/5/2021",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ export const special = [
     withDiscount: "34600",
     currency: "تومان",
     gift: "8400",
-    discountDate: "8/4/2021",
+    discountDate: "9/5/2021",
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ export const special = [
     price: "175000",
     withDiscount: "114000",
     currency: "تومان",
-    discountDate: "8/4/2021",
+    discountDate: "9/5/2021",
   },
 ];
 
