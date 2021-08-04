@@ -17,6 +17,10 @@ module.exports = {
       maxHeight: {
         sm: "420px",
       },
+      width: {
+        sm: "420px",
+        md: "830px",
+      },
     },
     fontFamily: {
       sans: ["Vazir"],
