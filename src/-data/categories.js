@@ -1,3 +1,64 @@
+// icons
+import { MdComputer, MdChildCare } from "react-icons/md";
+import { FiTool } from "react-icons/fi";
+import { FaTshirt, FaPencilRuler, FaLeaf } from "react-icons/fa";
+import { GiHotMeal, GiSofa } from "react-icons/gi";
+import { RiHeartPulseFill } from "react-icons/ri";
+import { IoMdFootball } from "react-icons/io";
+
+const main = [
+  {
+    name: "کالای دیجیتال",
+    count: "81000",
+    icon: MdComputer,
+  },
+  {
+    name: "خودرو ابزار و تجهیزات صنعتی",
+    count: "138000",
+    icon: FiTool,
+  },
+  {
+    name: "مد و پوشاک",
+    count: "622000",
+    icon: FaTshirt,
+  },
+  {
+    name: "اسباب بازی کودک و نوزاد",
+    count: "67000",
+    icon: MdChildCare,
+  },
+  {
+    name: "کالای های سوپر مارکتی",
+    count: "56000",
+    icon: GiHotMeal,
+  },
+  {
+    name: "زیبایی و سلامت",
+    count: "94000",
+    icon: RiHeartPulseFill,
+  },
+  {
+    name: "خانه و آشپزخانه",
+    count: "460000",
+    icon: GiSofa,
+  },
+  {
+    name: "کتاب , لوازم التحریر و هنر",
+    count: "250000",
+    icon: FaPencilRuler,
+  },
+  {
+    name: "ورزش و مسافرت",
+    count: "36000",
+    icon: IoMdFootball,
+  },
+  {
+    name: "محصولات بومی و محلی",
+    count: "1000",
+    icon: FaLeaf,
+  },
+];
+
 const digital = [
   {
     name: "لوازم جانبی گوشی",
@@ -78,4 +139,86 @@ const digital = [
   },
 ];
 
-export { digital };
+const tools = [
+  {
+    name: "خودرو های ایرانی و خارجی",
+  },
+  {
+    name: "موتور سیکلت",
+  },
+  {
+    name: "لوازم جانبی خودرو و موتور سیکلت",
+    children: [
+      "لوازم تزیینی",
+      "سیستم صوتی و تصویری",
+      "نظافت و نگهداری خودرو",
+      "کلاه کاسکت و لوازم جانبی خودرو",
+    ],
+  },
+  {
+    name: "لوازم یدکی خودرو و موتور سیکلت",
+    children: [
+      "دیسک و صفحه کلاج",
+      "سیستم صوتی و تصویری",
+      "نظافت و نگهداری خودرو",
+      "کلاه کاسکت و لوازم جانبی خودرو",
+      "کمک فنر",
+    ],
+  },
+  {
+    name: "لوازم مصرفی خودرو و موتور سیکلت",
+    children: [
+      "دیسک و صفحه کلاج",
+      "سیستم صوتی و تصویری",
+      "لنت ترمز",
+      "کمک فنر",
+    ],
+  },
+  {
+    name: "ابزار برقی",
+    children: [
+      "دیسک و صفحه کلاج",
+      "سیستم صوتی و تصویری",
+      "موتور برق",
+      "کمک فنر",
+      "کارواش",
+      "لنت ترمز",
+      "ابزار همه کاره برقی و شارژی",
+    ],
+  },
+  {
+    name: "ابزار غیر برقی",
+    children: [
+      "دیسک و صفحه کلاج",
+      "سیستم صوتی و تصویری",
+      "موتور برق",
+      "کمک فنر",
+      "کارواش",
+      "لنت ترمز",
+      "ابزار همه کاره برقی و شارژی",
+      "چسب صنعتی",
+    ],
+  },
+  {
+    name: "لوازم و یراق الات ساختمانی",
+    children: ["شیر آلات", "رنگ", " دستگیره در"],
+  },
+  {
+    name: "لوازم باغبانی",
+    children: ["شیر آلات", "رنگ", " دستگیره در", "تبر، بیل و کلنگ"],
+  },
+  {
+    name: "نور و روشنایی",
+    children: ["لامپ", " دستگیره در", "تبر، بیل و کلنگ"],
+  },
+  {
+    name: "تجهیزات ایمنی و کار",
+    children: ["کفش ایمنی"],
+  },
+  {
+    name: "حفاظتی و امنیتی",
+    children: ["گاو صندوق"],
+  },
+];
+
+export { main, digital, tools };
