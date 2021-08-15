@@ -114,7 +114,7 @@ const Home = () => {
       {/* mobile */}
       <section>
         <Container maxWidth="1366px" className="flex gap-7">
-          <div className="w-4/5">
+          <div className="w-full">
             <SliderBox
               title="گوشی موبایل"
               subTitle="بر اساس بازدید های شما"
