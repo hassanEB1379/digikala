@@ -64,7 +64,7 @@ export const superMarket = [
     withDiscount: "107500",
     currency: "تومان",
     gift: "5000",
-    discountDate: "8/15/2021",
+    discountDate: "9/15/2021",
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ export const superMarket = [
     withDiscount: "97200",
     currency: "تومان",
     gift: "3900",
-    discountDate: "8/15/2021",
+    discountDate: "9/15/2021",
   },
   {
     id: 3,
@@ -86,7 +86,7 @@ export const superMarket = [
     withDiscount: "34200",
     currency: "تومان",
     gift: "1100",
-    discountDate: "8/15/2021",
+    discountDate: "9/15/2021",
   },
   {
     id: 4,
@@ -97,7 +97,7 @@ export const superMarket = [
     withDiscount: "28500",
     currency: "تومان",
     gift: "1000",
-    discountDate: "8/15/2021",
+    discountDate: "9/15/2021",
   },
   {
     id: 5,
@@ -108,7 +108,7 @@ export const superMarket = [
     withDiscount: "16500",
     currency: "تومان",
     gift: "1000",
-    discountDate: "8/15/2021",
+    discountDate: "9/15/2021",
   },
 ];
 
