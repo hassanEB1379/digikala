@@ -8,13 +8,13 @@ import "swiper/swiper-bundle.min.css";
 SwiperCore.use([Navigation, Pagination]);
 
 const Slider = ({ children, gap, ...rest }) => {
-  return (
-    <Swiper spaceBetween={gap} {...rest}>
-      {Children.map(children, (item) => (
-        <SwiperSlide>{item}</SwiperSlide>
-      ))}
-    </Swiper>
-  );
+   return (
+      <Swiper spaceBetween={gap} {...rest}>
+         {Children.map(children, item => (
+            <SwiperSlide>{item}</SwiperSlide>
+         ))}
+      </Swiper>
+   );
 };
 
 export default Slider;
