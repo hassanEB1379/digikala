@@ -1,19 +1,29 @@
 import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
 
-const Collapse = (props) => {
-  const { component: Component = "div", children, show } = props;
+const Collapse = ({ show, children }) => {
+   const classes = clsx("transition-height duration-400", {
+      "overflow-visible": show,
+      "overflow-hidden": !show,
+   });
 
-  const classes = clsx(
-    "transition-height duration-400",
-    {
-      "h-0 invisible": !show,
-    },
-    {
-      "h-12": show,
-    }
-  );
+   const [height, setHeight] = useState();
 
-  return <Component className={classes}>{children}</Component>;
+   const ref = useRef();
+
+   useEffect(() => {
+      setHeight(ref.current.children[0].offsetHeight);
+   }, []);
+
+   return (
+      <div
+         ref={ref}
+         className={classes}
+         style={{ maxHeight: show ? height + "px" : 0 }}
+      >
+         <div>{children}</div>
+      </div>
+   );
 };
 
 export default Collapse;
