@@ -1,19 +1,19 @@
 import Home from "pages/Home/Home";
-import Footer from "components/section/Footer/Footer";
-import Header from "components/section/Header/Header";
+import Footer from "components/block/Footer/Footer";
+import Header from "components/block/Header/Header";
 
 const MainLayout = () => {
-  return (
-    <>
-      <Header />
+   return (
+      <>
+         <Header />
 
-      <main className="pt-32">
-        <Home />
-      </main>
+         <main className="pt-32">
+            <Home />
+         </main>
 
-      <Footer />
-    </>
-  );
+         <Footer />
+      </>
+   );
 };
 
 export default MainLayout;
