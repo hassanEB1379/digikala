@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/digikala/static/css/main.63c7f9ed.chunk.css",
-    "main.js": "/digikala/static/js/main.bbe4e64a.chunk.js",
-    "main.js.map": "/digikala/static/js/main.bbe4e64a.chunk.js.map",
+    "main.js": "/digikala/static/js/main.b549ce7d.chunk.js",
+    "main.js.map": "/digikala/static/js/main.b549ce7d.chunk.js.map",
     "runtime-main.js": "/digikala/static/js/runtime-main.157b88a0.js",
     "runtime-main.js.map": "/digikala/static/js/runtime-main.157b88a0.js.map",
     "static/css/2.84124788.chunk.css": "/digikala/static/css/2.84124788.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.84124788.chunk.css",
     "static/js/2.aa2682cf.chunk.js",
     "static/css/main.63c7f9ed.chunk.css",
-    "static/js/main.bbe4e64a.chunk.js"
+    "static/js/main.b549ce7d.chunk.js"
   ]
 }
